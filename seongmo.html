@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome To SeongmoWeb</title>
+  <style>
+    body {
+      margin: 5vh 10vw 5vh 10vw;
+      transition: background-color 0.3s ease;
+    }
+
+    .mainText {
+      text-decoration: none;
+      color: white;
+    }
+
+    .mainText:hover {
+      color: black;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .main {
+      font-size: 50px;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      border-bottom: 1px solid grey;
+      margin: 0;
+      min-width: 900px;
+      height: 100px;
+      min-height: 100px;
+      line-height: 100px;
+      background: linear-gradient(45deg, #009432, #2ecc71);
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(45deg, #009432, #9be098);
+      border-bottom: 1px solid grey;
+      padding: 20px 0;
+    }
+
+    .menu ol {
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .menu li {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .container {
+      display: flex;
+      min-width: 800px;
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease;
+    }
+
+    .first {
+      flex: 1;
+      padding: 20px;
+      background: linear-gradient(to top, #009432, #2ecc71);
+      border-right: 1px solid grey;
+      min-width: 200px;
+      border-radius: 0px 0px 0px 5px;
+      text-align: center;
+    }
+
+    .second {
+      flex: 4;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 0px 0px 5px 0px;
+      transition: background-color 0.3s ease;
+    }
+
+    .title {
+      width: auto;
+      font-weight: 600;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      margin: 20px 20px 0px 20px;
+    }
+
+    .title>.plan {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .title>.plan:hover {
+      font-weight: 600;
+      color: #5f3dc4;
+      cursor: pointer;
+    }
+
+    .content {
+      font-size: 18px;
+      margin: auto;
+      width: auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content>.boldText {
+      font-weight: 600;
+      color: #5f3dc4;
+    }
+
+    .image {
+      margin-top: 10px;
+      width: 400px;
+      height: 400px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image:hover {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      background: linear-gradient(45deg, #27ae60, #16a085);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table>thead>tr>th:first-child {
+      border: 1px solid white;
+      min-width: 100px;
+      color: white;
+    }
+
+    table>thead>tr>th {
+      border: 1px solid white;
+      min-width: 400px;
+      color: white;
+    }
+
+    table td {
+      border: 1px solid white;
+      background-color: #f8f0fc;
+    }
+
+    table td:hover {
+      border: 1px solid white;
+      background-color: #f8f0fc;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chartBox {
+      margin: auto;
+      width: 500px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 600px;
+      height: 400px;
+    }
+
+    .etcBox {
+      margin: 20px 0 0 20px;
+      padding: 10px;
+    }
+
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .gif-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .plan-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .learning-plan,
+    .personal-goals {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .learning-plan {
+      text-align: left;
+    }
+
+    .personal-goals {
+      text-align: left;
+    }
+
+    .interest-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .interest-container img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .interest-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .interest-content h3 {
+      margin-top: 0;
+    }
+
+    .company-logo {
+      width: 300px; 
+      height: auto;
+      margin: 20px 0;
+    }
+
+    .spec-image {
+      width: 1000px; 
+      height: auto;
+      margin: 20px 0;
+    }
+
+   
+    .background-introduce {
+      background-color: #f0f8ff; 
+    }
+
+    .background-plan {
+      background-color: #e6ffe6; 
+    }
+
+    .background-companies {
+      background-color: #fff0f5; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <span>Welcome To SeongmoWeb</span>
+  </div>
+
+  <div class="menu">
+    <ol>
+      <li><a class="mainText" href="#" onclick="showContent('introduce')">Introduce</a></li>
+      <li><a class="mainText" href="#" onclick="showContent('plan')">Plan</a></li>
+      <li><a class="mainText" href="#" onclick="showContent('Companies of Interest')">Companies of Interest</a></li>
+    </ol>
+  </div>
+
+  <div class="container" id="content-container">
+    <div class="second" id="content">
+    </div>
+  </div>
+
+  <script>
+    function showContent(section) {
+      const content = document.getElementById('content');
+      const contentContainer = document.getElementById('content-container');
+
+      
+      contentContainer.classList.remove('background-introduce', 'background-plan', 'background-companies');
+      content.classList.remove('background-introduce', 'background-plan', 'background-companies');
+
+      if (section === 'introduce') {
+        document.title = "Introduce Section";
+        content.innerHTML = `
+          <div class="title">
+            <img class="image" src="1.png" alt="Profile Image">
+            <div class="feature"> 이름: 홍성모</div>
+          </div>
+          <div class="content" style="margin-top: 20px;">
+            <span class="boldText">안녕하세요!</span>
+            <br> <span class="boldText">보안 소프트웨어 개발자</span>가 되고 싶은 <span class="boldText">홍성모</span>입니다
+            <br>
+            <p>보안 소프트웨어 개발자가 되고 싶었던 계기는 공주대학교로 편입하기 전 학교에서 보안관련 수업을 듣고 
+              <br>공부 하다보니 보안 쪽으로 흥미가 생겼고 보안 관련 직종을 찾아보다
+              <br>보안 소프트웨어 개발자가 되어야겠다 다짐 했습니다.</p>
+
+            <h3>
+              열심히 하겠습니다 !
+            </h3>
+          </div>`;
+        content.classList.add('background-introduce');
+      } else if (section === 'plan') {
+        document.title = "Learning Plan Section";  
+        content.innerHTML = `
+          <div class="title">
+            <h1>✏️ Learning Plan & Goals ✏️</h1>
+          </div>
+          <div class="plan-section">
+            <div class="learning-plan">
+              <img class="image" src="i1.gif" alt="Learning Plan GIF">
+            </div>
+            <div class="personal-goals">
+              <div class="content">
+                <div class="chartBox">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>학기</th>
+                        <th>목표</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3학년 1학기</td>
+                        <td>
+                          나의 진로 목표, 꿈 명확히 설정해서
+                          <br>공부 방향 설정
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3학년 2학기</td>
+                        <td>
+                          TOEIC, 진로 관련 자격증 공부                   
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4학년 1학기</td>
+                        <td> 관련 분야 대회에 나갈 기회가 생기면
+                          <br> 출전해서 수상, 경험 쌓기
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4학년 2학기</td>
+                        <td>졸업 예정 학기인 만큼 졸업요건 
+                          <br>잘 준비해서 무사 졸업                         
+                        </td>
+                      </tr>                     
+                    </tbody>
+                  </table>
+                  <div class="title">                   
+                    <div class="plan" style="margin-top: 20px;"> - 학점 3.5 이상 유지하기 🔥</div>
+                    <div class="plan"> - TOEIC 시험 800점 취득 🔥</div>
+                    <div class="plan"> - 졸업 전 기사 시험 합격 🔥</div>
+                  </div>
+              </div>           
+          </div>`;
+        content.classList.add('background-plan');
+      } else if (section === 'Companies of Interest') {
+        document.title = "Companies of Interest Section"; 
+        content.innerHTML = `
+          <div class="interest-container">
+            <a href="https://www.ahnlab.com/kr" target="_blank">
+              <img src="AhnLab.png" alt="AhnLab" class="company-logo">
+            </a>
+            <div class="interest-content">
+              <h3>안랩 (AhnLab)</h3>
+              <p>안랩은 대한민국의 정보보안 기업으로, 1995년 설립된 이후로 다양한 보안 솔루션과 서비스를 제공하고 있습니다. 안랩은 안티바이러스 소프트웨어, 네트워크 보안, 클라우드 보안 등 다양한 분야에서 활동하고 있으며, 글로벌 시장에서도 인지도를 쌓아가고 있습니다.</p>
+              <h4>채용 조건</h4>
+              <ul>
+                <li>컴퓨터 공학 또는 관련 분야 학사 학위 이상</li>
+                <li>정보보안 관련 경력 2년 이상</li>
+                <li>네트워크 보안 및 시스템 보안에 대한 이해</li>
+                <li>문제 해결 능력과 팀 협업 능력</li>
+                <li>우대 사항: 보안 관련 자격증 (CISSP, CISA 등)</li>
+              </ul>
+              <h3>안랩(AhnLab) 의 최근 몇 년 동안 합격자들의 스펙 정보입니다.</h3>
+              <img src="spec2.png" alt="spec" class="spec-image">
+              <p>
+              <p>현재로서는 학기중엔 재학중인 학교에서 배우는 과목들을 열심히 공부하며 학점을 관리하고 종강후 시간이 생길 때 토익과 관련 자격증 공부도 틈틈히 할 예정입니다 학교를 다니며 여려 경험과 지식을 쌓아서 꼭 합격하고 싶습니다.</p>
+            </div>
+          </div>`;
+        content.classList.add('background-companies');
+      }
+    }
+  </script>
+</body>
+
+</html>
+
+             
+
